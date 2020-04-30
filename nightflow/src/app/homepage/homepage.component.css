@@ -1,0 +1,21 @@
+.title-nav-bar {
+    font-family: 'Dosis', sans-serif;
+}
+
+.tool-bar {
+    background-color: #020509;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.nav-bar-option {
+    font-family: 'Dosis', sans-serif;
+}
+
+.register-button{
+    font-family: 'Dosis', sans-serif;
+    background-color: #FF0038;
+    color: #ffffff;
+}
