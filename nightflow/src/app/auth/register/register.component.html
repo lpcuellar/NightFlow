@@ -7,24 +7,24 @@
                     <fieldset class="log-in-form">
                         <div class="form-group">
                             <label for="InputFirstName1">First Name</label>
-                            <input  class="form-control" formControlName = "firstName" aria-describedby="emailHelp" placeholder="Enter first name" style="background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
+                            <input  class="form-control" formControlName = "firstName" required aria-describedby="emailHelp" placeholder="Enter first name" style="background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
                         </div> 
                         <div class="form-group">
                             <label for="InputLastName1">Last Name</label>
-                            <input class="form-control" formControlName = "lastName" aria-describedby="emailHelp" placeholder="Enter last name" style="background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
+                            <input class="form-control" formControlName = "lastName" required aria-describedby="emailHelp" placeholder="Enter last name" style="background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
                         </div>    
                         <div class="form-group">
                             <label for="InputEmail1">Email address</label>
-                            <input type="email" class="form-control" formControlName = "email" aria-describedby="emailHelp" placeholder="Enter email" style="background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
+                            <input type="email" class="form-control" formControlName = "email" required aria-describedby="emailHelp" placeholder="Enter email" style="background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                         <div class="form-group">
-                            <label for="InputUsername1">username</label>
-                            <input class="form-control" formControlName = "username" placeholder="Enter username" style="background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
+                            <label for="InputUsername1">Username</label>
+                            <input class="form-control" formControlName = "username" required placeholder="Enter username" style="background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
                         </div> 
                         <div class="form-group">
                             <label for="InputPassword1">Password</label>
-                            <input type="password" class="form-control" formControlName = "password" placeholder="Password" style="background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
+                            <input type="password" class="form-control" formControlName = "password" required placeholder="Password" style="background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
                             <small id="emailHelp" class="form-text text-muted">Your password must be at least 6 characters.</small>
                             
                         </div>

@@ -30,9 +30,13 @@ export class LoginComponent implements OnInit {
   async onLogin() {
     const { email, password } = this.loginForm.value
     try {
-      const user = this.authService.login(email, password)
-      if( user ) {
+      const user = await this.authService.login(email, password)
+      if( user && user.user.emailVerified) {
         this.router.navigate(['/home'])
+      } else if ( user ) {
+        this.router.navigate(['/verification-email'])
+      } else {
+        this.router.navigate(['/register'])
       }
     } catch(error) {
       console.log(error)
