@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig : {
+    apiKey: "AIzaSyB07Af-5qgXnpCRPSa_o2gFphqA9K7er8A",
+    authDomain: "nightflow-8181e.firebaseapp.com",
+    databaseURL: "https://nightflow-8181e.firebaseio.com",
+    projectId: "nightflow-8181e",
+    storageBucket: "nightflow-8181e.appspot.com",
+    messagingSenderId: "197000472596",
+    appId: "1:197000472596:web:a1424cf96a2d3cb7561f01"
+  }
 };
 
 /*

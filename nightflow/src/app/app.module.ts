@@ -1,35 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatCardModule } from '@angular/material/card'
+import { ReactiveFormsModule } from '@angular/forms';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { CategoriesComponent } from './categories/categories.component';
-import { ProfileComponent } from './profile/profile.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { environment } from 'src/environments/environment';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent,
-    CategoriesComponent,
-    ProfileComponent,
+    NavbarComponent
   ],
-
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatCardModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule
   ],
-
   providers: [],
-  bootstrap: [ AppComponent ]  
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

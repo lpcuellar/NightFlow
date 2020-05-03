@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "nightflow-8181e": {
+      "hosting": {
+        "nightflow": [
+          "nightflow-8181e"
+        ]
+      }
+    }
+  }
+}
