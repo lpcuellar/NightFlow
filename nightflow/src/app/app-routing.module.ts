@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 import { SendEmailComponent } from './auth/send-email/send-email.component';
+import { SearchComponent } from './search/search.component'
 
 
 const routes: Routes = [
@@ -11,11 +12,13 @@ const routes: Routes = [
   { path: 'login', loadChildren: () => import('./auth/login/login.module').then(m => m.LoginModule) }, 
   { path: 'register', loadChildren: () => import('./auth/register/register.module').then(m => m.RegisterModule) },
   { path: 'verification-email', component: SendEmailComponent },
-  { path: 'forgot-password', loadChildren: () => import('./auth/forgot-password/forgot-password.module').then(m => m.ForgotPasswordModule) }
+  { path: 'forgot-password', loadChildren: () => import('./auth/forgot-password/forgot-password.module').then(m => m.ForgotPasswordModule) },
+  { path: 'results', component: SearchComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
