@@ -13,6 +13,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { environment } from 'src/environments/environment';
 import { SendEmailComponent } from './auth/send-email/send-email.component';
 import { SearchComponent } from './search/search.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -22,6 +23,7 @@ import { SearchComponent } from './search/search.component';
     NavbarComponent,
     SendEmailComponent,
     SearchComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

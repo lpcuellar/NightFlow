@@ -23,7 +23,7 @@ export class SearchComponent implements OnInit {
       this.searchTag = params['search'];
     })
 
-    console.log(this.searchTag);
+    console.log("llega a results --> ", this.searchTag);
 
     
   }
