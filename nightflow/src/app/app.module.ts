@@ -14,6 +14,7 @@ import { environment } from 'src/environments/environment';
 import { SendEmailComponent } from './auth/send-email/send-email.component';
 import { SearchComponent } from './search/search.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 
 
@@ -24,6 +25,7 @@ import { ProfileComponent } from './profile/profile.component';
     SendEmailComponent,
     SearchComponent,
     ProfileComponent,
+    CategoriesComponent,
   ],
   imports: [
     BrowserModule,

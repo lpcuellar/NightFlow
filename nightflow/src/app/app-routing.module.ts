@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SendEmailComponent } from './auth/send-email/send-email.component';
 import { SearchComponent } from './search/search.component'
 import { ProfileComponent } from './profile/profile.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'forgot-password', loadChildren: () => import('./auth/forgot-password/forgot-password.module').then(m => m.ForgotPasswordModule) },
   { path: 'results', component: SearchComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'categories', component: CategoriesComponent },
 ];
 
 @NgModule({
