@@ -18,11 +18,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  goSearch() {
-    const search = this.searchPlace.value;
+  goSearch(category) {
+    const search = category;
     if(search !== ''){
-      console.log("sale de home --> ", search);
       this.router.navigate(['/results'], {queryParams: {"search": search}})
     }
   }
