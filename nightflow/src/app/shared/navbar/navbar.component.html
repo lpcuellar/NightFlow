@@ -6,7 +6,10 @@
     <div class="navbar-collapse collapse" id="navbarColor01">
         <ul class="navbar-nav" *ngIf="user$ | async as user; else login">
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/']">Home</a>
+                <a class="nav-link" [routerLink]="['/']">Search</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/categories']">Categories</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link"  [routerLink]="['/profile']" style="cursor: pointer;">{{ user?.email }}</a>
@@ -14,13 +17,12 @@
         </ul>
 
         <ng-template #login>
-            <div class="nav-item">
-                <input class="search" type="text" [formControl]="searchPlace" placeholder="Buscar">
-                <a class=iconSearch (click)="goSearch()"><i class="fas fa-search"></i></a>
-            </div>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/']">Home</a>
+                    <a class="nav-link" [routerLink]="['/']">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/categories']">Categories</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" [routerLink]="['/login']">Log In</a>
