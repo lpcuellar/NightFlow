@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵConsole } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Place } from '../place.model';
-import { SearchService } from '../auth/services/search.service';
+import { places, filterPlaces } from '../../places';
 
 @Component({
   selector: 'app-search',
@@ -10,22 +9,21 @@ import { SearchService } from '../auth/services/search.service';
 })
 export class SearchComponent implements OnInit {
   searchTag: any;
-  Places: Place[];
+  places = places;
+  result = [];
 
   constructor(
-    private searchService: SearchService,
     private route: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
-
     this.route.queryParams.subscribe(params => {
       this.searchTag = params['search'];
     })
 
-    console.log("llega a results --> ", this.searchTag);
+    this.searchTag = this.searchTag.toLowerCase();
 
-    
+    this.result = filterPlaces(places, this.searchTag, this.result);
   }
 
 }

@@ -15,6 +15,7 @@ import { SendEmailComponent } from './auth/send-email/send-email.component';
 import { SearchComponent } from './search/search.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PlaceComponent } from './place/place.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 
 
@@ -26,6 +27,7 @@ import { PlaceComponent } from './place/place.component';
     SearchComponent,
     ProfileComponent,
     PlaceComponent,
+    CategoriesComponent,
   ],
   imports: [
     BrowserModule,

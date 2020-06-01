@@ -12,6 +12,11 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,600&display=swap");
+@use postcss-color-function;
+@use postcss-nested;
+@import "compass/css3";
+
+
 :root {
 
   --blue: #007bff;
@@ -10776,46 +10781,52 @@ th {
   }
 }
 
-.searchbar{
-  margin-bottom: auto;
-  margin-top: 16rem;
-  height: 60px;
-  background-color: #00cffa;
-  border-radius: 30px;
-  padding: 10px;
+.search__container {
+  /* padding-top: 64px; */
 }
 
-.search_input{
-  color: white;
-  font-weight: 600;
-  font-size: large;
-  border: 0;
+.search__input {
+width: 75%;
+min-width: 350px;
+padding: 12px 24px; 
+background-color: transparent;
+transition: transform 250ms ease-in-out;
+font-size: 16px;
+font-weight: 500;
+line-height: 18px;
+
+color: #ffffff;
+background-color: transparent;
+background-image: url(../img/icons8-search-50.png);
+background-repeat: no-repeat;
+background-size: 35px 35px;
+background-position: 95% center;
+border-radius: 50px;
+border: 1px solid #ffffff;
+transition: all 250ms ease-in-out;
+backface-visibility: hidden;
+transform-style: preserve-3d;
+}
+.search__input::placeholder {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.search__input:hover{
+  padding: 12px 0;
   outline: 0;
-  background: none;
-  width: 0;
-  caret-color:transparent;
-  line-height: 40px;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #ffffff;
+  border-radius: 0;
+  background-position: 100% center;
 }
 
-.searchbar:hover > .search_input{
-  padding: 0 10px;
-  width: 250px;
-  caret-color: #ff0038;
-}
-
-.searchbar:hover > .search_icon{
-  background: white;
-  color: #ff0038;
-}
-
-.search_icon{
-  height: 40px;
-  width: 40px;
-  float: right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  color:white;
-  text-decoration:none;
+.search__input:focus {
+  padding: 12px 0;
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #ffffff;
+  border-radius: 0;
+  background-position: 100% center;
 }

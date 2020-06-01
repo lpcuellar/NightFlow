@@ -23,15 +23,4 @@ export class NavbarComponent implements OnInit {
 
   async ngOnInit() {
   }
-
-  logout() {
-    this.authService.logout();
-  }
-  goSearch(){
-    const search = this.searchPlace.value;
-    if(search !== ''){
-      console.log("sale de home --> ", search);
-      this.router.navigate(['/results'], {queryParams: {"search": search}})
-    }
-  }
 }
