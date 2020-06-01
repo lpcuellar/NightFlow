@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Place } from '../../place.model';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';  // Firebase modules for Database, Data list and Single object
 
 @Injectable({

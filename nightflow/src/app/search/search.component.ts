@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Place } from '../place.model';
 import { SearchService } from '../auth/services/search.service';
 
 @Component({
@@ -10,7 +9,6 @@ import { SearchService } from '../auth/services/search.service';
 })
 export class SearchComponent implements OnInit {
   searchTag: any;
-  Places: Place[];
 
   constructor(
     private searchService: SearchService,
