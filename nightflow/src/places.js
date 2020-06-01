@@ -19,7 +19,13 @@ export const places = [
             'z10',
             'santa amelia'            
         ],
-        'reviews': [],
+        'reviews': [
+            {
+                'email': 'lpcuellar14@gmail.com',
+                'score': 0.0,
+                'description': 'Hi Tom. Just to formally acknowledge all your super service and help. Before I found this Bentley I had contacted a lot of other dealers and visited one or two also. I have to say that from the first initial phone contact with you....you were super helpful, totally knowledgeable and very pragmatic.'
+            },
+        ],
     },
     {
         'name': "La Estancia",
@@ -283,6 +289,7 @@ export const places = [
             'top',
             'tee',
             'bar',
+            'top tee',
             'múscia',
             'musica',
             'activities',
@@ -306,6 +313,7 @@ export const places = [
             'aurora',
             'la aurora',
             'zoológico',
+            'zoológico la aurora',
             'animales',
             'activities',
             'leones',
@@ -353,4 +361,44 @@ export const filterPlaces = (array, searchTag, result) => {
     }
 
     return result;
+}
+
+export const getPlace = (array, placeName, result) => {
+    for (var i = 0; i < array.length; i++) {
+        let lugar = array[i];
+        if (lugar.tags.includes(placeName)) {
+          result.push(lugar);
+        } 
+    }
+
+    return result;
+}
+
+export const getReviews = (array, result) => {
+    for (var i = 0; i < array.length; i++) {
+        let lugar = array[i];
+        for (var j = 0; j < lugar.reviews.length; j++) {
+            result.push(lugar.reviews[j])
+        }
+    }
+
+    return result;
+}
+
+export const addReview = (place, email, score, description) => {
+
+    console.log(place, email, score, description)
+    for (var i = 0; i < places.length; i++) {
+        let lugar = places[i];
+        if(lugar.name.toLowerCase() === place) {
+            lugar.reviews.push(
+                {
+                    'email': email,
+                    'score': parseInt(score),
+                    'description': description
+                }
+            );
+        }
+        console.log(lugar.name, lugar.reviews)
+    }
 }

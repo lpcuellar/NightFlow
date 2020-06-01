@@ -2,14 +2,14 @@
     <h1 class="title" style="margin-top: 2rem;"> Mostrando resultados de: {{ searchTag }} </h1>
 
     <div class="row">
-        <div class="col-md-4 col-sm-6 col-12" *ngFor="let place of result" >
-            <div class="card mb-3" style=" background-color: #00cffa;">
-                <div class="card-body" >
+        <div class="col-md-4 col-sm-6 col-12" *ngFor="let place of result">
+            <div class="card mb-3" (click)="goPlacePage(place.name)" style=" background-color: #00cffa;">
+                <div class="card-body" style="cursor: pointer;">
                     <h4 class="card-title">{{ place.name }}</h4>
-                    <h5 class="card-subtitle mb-2"><strong>Location:</strong> {{ place.address }}</h5>
-                    <h6 class="card-subtitle mb-2"><strong>Rating:</strong> {{ place.avgScore }} / 5</h6>
-                    <h6 class="card-subtitle mb-2"><strong>Pricing:</strong> {{ place.price }}</h6>
-                    <h6 class="card-subtitle mb-2"><strong>Schedule:</strong> {{ place.schedule }}</h6>
+                    <h5 class="card-subtitle mb-2" style="font-size: 16px"><strong style="text-decoration: underline;">Location:</strong> {{ place.address }}</h5>
+                    <h6 class="card-subtitle mb-2" style="font-size: 16px"><strong style="text-decoration: underline;">Rating:</strong> {{ place.avgScore }} / 5</h6>
+                    <h6 class="card-subtitle mb-2" style="font-size: 16px"><strong style="text-decoration: underline;">Pricing:</strong> {{ place.price }}</h6>
+                    <h6 class="card-subtitle mb-2" style="font-size: 16px"><strong style="text-decoration: underline;">Schedule:</strong> {{ place.schedule }}</h6>
                 </div>
             </div>
         </div>

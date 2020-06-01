@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
   goSearch() {
     const search = this.searchPlace.value;
     if(search !== ''){
-      this.router.navigate(['/results'], {queryParams: {"search": search}})
-    }
-  }
+      this.router.navigate(['/results'], {queryParams: {"search": search}});
+    };
+  };
 }

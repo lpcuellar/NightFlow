@@ -19,7 +19,6 @@ export class CategoriesComponent implements OnInit {
 
   goSearch(category) {
     const search = category;
-    console.log('sale? :(', search);
     if(search !== ''){
       this.router.navigate(['/results'], {queryParams: {"search": search}})
     }

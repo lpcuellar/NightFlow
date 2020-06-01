@@ -5,6 +5,7 @@ import { SendEmailComponent } from './auth/send-email/send-email.component';
 import { SearchComponent } from './search/search.component'
 import { ProfileComponent } from './profile/profile.component';
 import { CategoriesComponent } from  './categories/categories.component';
+import { PlaceComponent } from './place/place.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'results', component: SearchComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'categories', component: CategoriesComponent },
+  { path: 'place', component: PlaceComponent },
 ];
 
 @NgModule({

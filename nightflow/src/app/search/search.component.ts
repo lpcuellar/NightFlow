@@ -1,5 +1,5 @@
 import { Component, OnInit, ɵConsole } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { places, filterPlaces } from '../../places';
 
 @Component({
@@ -14,6 +14,7 @@ export class SearchComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -25,5 +26,9 @@ export class SearchComponent implements OnInit {
 
     this.result = filterPlaces(places, this.searchTag, this.result);
   }
+
+  goPlacePage = (place) => {
+    this.router.navigate(['/place'], {queryParams: {"palce": place}});
+  }; 
 
 }
